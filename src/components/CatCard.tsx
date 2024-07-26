@@ -14,7 +14,7 @@ const CatCard: React.FC<CatCardProps> = ({ cat, handleDelete }) => {
       <div className="max-w-sm rounded-2xl overflow-hidden shadow-lg border-4 border-black">
         <div className="h-64 w-64 relative"> {/* Set fixed height and width and relative position */}
           <div 
-            className='absolute top-0 right-0 cursor-pointer'
+            className='absolute top-0 right-0 cursor-pointer transition-transform duration-300 transform hover:rotate-[45deg]'
             onClick={handleDelete}
           >
             {/* SVG of the trash icon */}

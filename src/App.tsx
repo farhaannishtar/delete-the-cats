@@ -10,7 +10,7 @@ const queryClient = new QueryClient();
 
 function App() {
 
-  const [bgColor, setBgColor] = useState('bg-white'); // Default background color is white
+  const [bgColor, setBgColor] = useState('bg-purple-200'); // Default background color is white
 
   useEffect(() => {
     const colors = ['bg-red-200', 'bg-blue-200', 'bg-green-200', 'bg-yellow-200', 'bg-purple-200'];
@@ -27,7 +27,7 @@ function App() {
     <>
       <div className={`${bgColor} min-h-screen flex flex-col transition-colors duration-1000`}>
         <QueryClientProvider client={queryClient}>
-          <h1 className='text-red-700 font-bold text-5xl leading-tight mt-3'>Trash the Cats</h1>
+          <h1 className='text-black font-bold text-5xl leading-tight mt-3'>Trash the Cats</h1>
           <CatList />
         </QueryClientProvider>
       </div>
