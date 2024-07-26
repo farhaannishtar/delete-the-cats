@@ -4,3 +4,11 @@ export interface Cat {
   width: number;
   height: number;
 }
+
+export interface CatCardProps {
+  cat: {
+    id: string;
+    url: string;
+  }
+  handleDelete: (e: React.MouseEvent<HTMLDivElement>) => void;
+}

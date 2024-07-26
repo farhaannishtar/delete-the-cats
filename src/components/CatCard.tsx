@@ -1,12 +1,5 @@
 import React from 'react';
-
-interface CatCardProps {
-  cat: {
-    id: string;
-    url: string;
-  }
-  handleDelete: (e: React.MouseEvent<HTMLDivElement>) => void;
-}
+import { CatCardProps } from '../types';
 
 const CatCard: React.FC<CatCardProps> = ({ cat, handleDelete }) => {
   return (
