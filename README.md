@@ -1,30 +1,31 @@
-# React + TypeScript + Vite
+# Trash the Cats
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Screenshot
 
-Currently, two official plugins are available:
+<img width="1440" alt="Screenshot 2024-07-27 at 2 20 53 PM" src="https://github.com/user-attachments/assets/17e4cd79-9669-4ff2-9a59-229e0fe1eb76">
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About
 
-## Expanding the ESLint configuration
+This application fetches 10 cat images and stores them in client-side state. Users can delete images by clicking the trash icon.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Live site: https://trash-the-cats.vercel.app/
 
-- Configure the top-level `parserOptions` property like this:
+Loom: https://www.loom.com/share/d2a41e0661c04a3cbe74f826f97b0766
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Technology Stack
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **Frontend**: React, Vite, TypeScript, TailwindCSS
+- **Data Fetching and State Management**: Tanstack Query (f.k.a. React Query)
+- **Backend**: N/A
+- **APIs**: [The Cat API](https://api.thecatapi.com/v1/images/search?limit=10)
+- **Version Control**: GitHub
+- **Code Editor**: VSCode
+
+## Features and Functionality
+
+- Used useFetchCats.ts custom hook for fetching and state management with Tanstack Query.
+- App and trashcan backgrounds change colors automatically in sync.
+- Trashcan icon rotates 45 degrees slowly on hover.
+- Clicking trashcan icon deletes cat images from client-side state
+  
+## Installation and Setup Instructions
