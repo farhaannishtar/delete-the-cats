@@ -29,3 +29,20 @@ Loom: https://www.loom.com/share/d2a41e0661c04a3cbe74f826f97b0766
 - Clicking trashcan icon deletes cat images from client-side state
   
 ## Installation and Setup Instructions
+
+### Clone the project repository by running:
+```
+git clone https://github.com/your-username/trash-the-cats.git
+cd trash-the-cats
+```
+### Inside the project directory, install the required npm packages:
+
+```
+npm install
+```
+
+### Then run 
+
+```
+npm run dev
+```
