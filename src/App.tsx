@@ -18,7 +18,7 @@ function App() {
     const intervalId = setInterval(() => {
       const randomColor = colors[Math.floor(Math.random() * colors.length)];
       setBgColor(randomColor);
-    }, 3500); // Change color every 3.5 seconds
+    }, 2500); // Change color every 2.5 seconds
 
     return () => clearInterval(intervalId); // Cleanup interval on component unmount
   }, []);
@@ -28,7 +28,7 @@ function App() {
       <div className={`${bgColor} min-h-screen flex flex-col transition-colors duration-1000`}>
         <QueryClientProvider client={queryClient}>
           <h1 className='text-black font-bold text-5xl leading-tight mt-3'>Trash the Cats</h1>
-          <CatList />
+          <CatList bgColor={bgColor}/>
         </QueryClientProvider>
       </div>
     </>

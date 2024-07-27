@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import useFetchCats from '../hooks/useFetchCats';
 import CatCard from './CatCard';
 import { Cat } from '../types';
+import { CatListProps } from '../types';
 
-const CatList: React.FC = () => {
+const CatList: React.FC<CatListProps> = ({ bgColor }) => {
   const { data: initialCats, isLoading, error } = useFetchCats();
   const [cats, setCats] = useState<Cat[] | null>(null);
 
@@ -32,7 +33,7 @@ const CatList: React.FC = () => {
     <>
       <ul className="flex flex-wrap justify-center items-center">
         {cats?.map((cat) => (
-          <CatCard cat={cat} handleDelete={() => handleDelete(cat.id)}/>
+          <CatCard cat={cat} handleDelete={() => handleDelete(cat.id)} bgColor={bgColor}/>
         ))}
       </ul>
     </>

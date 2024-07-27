@@ -13,6 +13,7 @@ const fetchCats = async (): Promise<Cat[]> => {
 // Custom hook to fetch cat data
 const useFetchCats = () => {
   return useQuery({
+    // queryKey used for caching and background refetching
     queryKey: ['cats'],
     queryFn: fetchCats,
   });
